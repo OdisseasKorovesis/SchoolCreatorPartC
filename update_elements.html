@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">   
+</head>
+
+<body>
+    <div class="container">
+        
+
+        <!-- Course insert form -->
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Update a course</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-form">
+                <div class="row p-3">
+                    <div class="col-6">
+                        <label for="courses">Select a course to update:</label>
+
+                        <select id="courses" required>
+                          <option value="java">Java</option>
+                          <option value="c#">C#</option>
+                          <option value="html">HTML</option>
+                          <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="course-title"
+                            placeholder="Enter a course title (e.g. Java)" maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="stream">Stream</label>
+                        <input type="text" class="form-control" id="stream"
+                            placeholder="Enter a course stream (e.g. Full-Time)" maxlength="45"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="type">Type</label>
+                        <input type="text" class="form-control" id="course-type"
+                            placeholder="Enter a course type (e.g. Back-End)" maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="start-date">Start Date</label>
+                        <input id="course-start" type="date" class="form-control"
+                            placeholder="Enter a start-date (dd/mm/yyyy)"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="end-date">End Date</label>
+                        <input id="course-end" type="date" class="form-control" 
+                            placeholder="Enter an end-date (dd/mm/yyyy)" min=""/>
+                    </div>
+                </div>
+            </form>
+            <div class="row pl-5 py-4">
+                <button type="submit" form="course-form" id="course-button" class="btn bg-light col-2">Update course</button>
+            </div>
+        </div>
+        
+        
+
+        <!-- Student/Trainer insert form 1 Line -->
+        <div class="row mt-5">
+            <div class="col-5  bg-light rounded text-center">
+                <h3 class="">Update a student</h3>
+            </div>
+            <div class="col-5 col-md-offset-2 bg-light rounded text-center">
+                <h3 class="">Update a trainer</h3>
+            </div>
+        </div>
+        <div class="row mt-5">
+
+            <div id="student-form-box" class="col-5 bg-secondary rounded">
+
+                <form id="student-form">
+                    <div class="row p-3">
+                        <div class="col-6">
+                            <label for="students">Select a student to update:</label>
+    
+                            <select id="students" required>
+                                <option value="odi-kd">Odisseas Korovesis</option>
+                                <option value="anastasia-kou">Anastasia Kounoupi</option>
+                                <option value="tina-da">Tina Danon</option>
+                                <option value="dimitris-ko">Dimitris Korovesis</option>
+                                <option value="konna-sin">Konstantina Sinevrioti</option>
+                                <option value="konn-oik">Konstantinos Oikonomidis</option>
+                                <option value="alk-bag">Alkistis Bageri</option>
+                                <option value="lucia-bi">Lucia Binioli</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="first-name">First Name</label>
+                            <input type="text" class="form-control" id="student-first-name" placeholder="Enter a First Name" maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" id="student-last-name" placeholder="Enter a Last Name" maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="birth-date">Birth Date</label>
+                            <input type="date" class="form-control" id="birth-date"
+                                placeholder="Enter a Date of Birth (dd/mm/yyyy)" min="1920-01-01"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="tuition-fees">Tuition Fees</label>
+                            <input type="number" class="form-control" id="tuition-fees"
+                                placeholder="Enter the Tuition Fees Amount" min="0" max="5000"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="row pl-5 py-4">
+                    <button type="submit" form="student-form" id="student-button" class="btn bg-light col-4">Update Student</button>
+                </div>
+            </div>
+
+            <div id="trainer-form-box" class="col-5 col-md-offset-2 bg-secondary rounded">
+                <form id="trainer-form">
+                    <div class="row p-3">
+                        <div class="col-6">
+                            <label for="trainers">Select a trainer to update:</label>
+    
+                            <select id="trainers" required>
+                                <option value="giorgos-p">Giorgos Papadakis</option>
+                                <option value="iasonas-m">Iasonas Michalopoulos</option>
+                                <option value="maria-p">Maria Panagiotidou</option>
+                                <option value="ismini-a">Ismini Aleksiadou</option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="first-name">First Name</label>
+                            <input type="text" class="form-control" id="trainer-first-name" placeholder="Enter a Last Name" maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" id="trainer-last-name" placeholder="Enter a Last Name" maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter a Subject" maxlength="45"/>
+                        </div>
+                    </div>
+                </form>
+                <div id="course" class="row pl-5 pt-4">
+                    <button type="submit" form="trainer-form" id="trainer-button" class="btn bg-light col-4">Update Trainer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignment Insert Form -->
+
+        <div class="row mt-5"></div>
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Select an assignment to update:</h3>
+        </div>
+        <div id="assignment-form-box" class="bg-secondary rounded">
+            <form id="assignment-form">
+                <div class="row p-3">
+                    <div class="col-6">
+                        <label for="assignments">Select a course to be updated:</label>
+
+                        <select id="assignments" required>
+                            <option value="classes">Play With Classes</option>
+                            <option value="methods">Play With Methods</option>
+                            <option value="inheritance">Play With Inheritance</option>
+                            <option value="primitives">Play With Primitives</option>
+                            <option value="interfaces">Play With Interfaces</option>
+                            <option value="exceptions">Play With Exceptions</option>
+                            <option value="appearance">Play With Appearance</option>
+                            <option value="widgets">Play With Widgets</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="assignment-title" placeholder="Enter an assignment title" maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description"
+                            placeholder="Enter an assignment description" maxlength="45"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="sub-date">Sumbission Date</label>
+                        <input type="date" class="form-control" id="sub-date" placeholder="Enter a submission date"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="total-mark">Total Mark</label>
+                        <input type="number" class="form-control" id="total-mark"
+                            placeholder="Enter the assignment's total mark" min="0" max="100"/>
+                    </div>
+                </div>
+            </form>
+            <div class="row pl-5 py-4">
+                <button type="submit" form="assignment-form" id="assignment-button" class="btn bg-light col-2">Update Assignment</button>
+            </div>
+        </div>    
+
+    
+</body>
+
+<script src = "update_elements.js">
+</script>
+
+
+</html>

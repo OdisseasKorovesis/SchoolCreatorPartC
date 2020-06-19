@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">   
+</head>
+
+<body>
+    <div class="container">        
+
+        <!-- Course insert form -->
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Create a course!</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-form">
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="course-title"
+                            placeholder="Enter a course title (e.g. Java)" required maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="stream">Stream</label>
+                        <input type="text" class="form-control" id="stream"
+                            placeholder="Enter a course stream (e.g. Full-Time)" required maxlength="45"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="type">Type</label>
+                        <input type="text" class="form-control" id="course-type"
+                            placeholder="Enter a course type (e.g. Back-End)" required maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="start-date">Start Date</label>
+                        <input id="course-start" type="date" class="form-control"
+                            placeholder="Enter a start-date (dd/mm/yyyy)" required/>
+                    </div>
+                    <div class="col-6">
+                        <label for="end-date">End Date</label>
+                        <input id="course-end" type="date" class="form-control"
+                            placeholder="Enter an end-date (dd/mm/yyyy)" required min=""/>
+                    </div>
+                </div>
+            </form>
+            <div class="row pl-5 py-4">
+                <button type="submit" form="course-form" id="course-button" class="btn bg-light col-2">Insert course</button>
+            </div>
+        </div>
+        
+        
+
+        <!-- Student/Trainer insert form 1 Line -->
+        <div class="row mt-5">
+            <div class="col-5  bg-light rounded text-center">
+                <h3 class="">Create a Student!</h3>
+            </div>
+            <div class="col-5 col-md-offset-2 bg-light rounded text-center">
+                <h3 class="">Create a Trainer!</h3>
+            </div>
+        </div>
+        <div class="row mt-5">
+
+            <div id="student-form-box" class="col-5 bg-secondary rounded">
+
+                <form id="student-form">
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="first-name">First Name</label>
+                            <input type="text" class="form-control" id="first-name" placeholder="Enter a First Name" required maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" id="last-name" placeholder="Enter a Last Name" required maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="birth-date">Birth Date</label>
+                            <input type="date" class="form-control" id="birth-date"
+                                placeholder="Enter a Date of Birth (dd/mm/yyyy)" required min="1920-01-01"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="tuition-fees">Tuition Fees</label>
+                            <input type="number" class="form-control" id="tuition-fees"
+                                placeholder="Enter the Tuition Fees Amount" required min="0" max="5000"/>
+                        </div>
+                    </div>
+                </form>
+                <div class="row pl-5 py-4">
+                    <button type="submit" form="student-form" id="student-button" class="btn bg-light col-4">Insert Student</button>
+                </div>
+            </div>
+
+            <div id="trainer-form-box" class="col-5 col-md-offset-2 bg-secondary rounded">
+                <form id="trainer-form">
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="first-name">First Name</label>
+                            <input type="text" class="form-control" id="trainer-first-name" placeholder="Enter a First Name" required maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" class="form-control" id="trainer-last-name" placeholder="Enter a Last Name" required maxlength="45"/>
+                        </div>
+                    </div>
+                    <div class="row p-3 ">
+                        <div class="col-12">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter a Subject" required maxlength="45"/>
+                        </div>
+                    </div>
+                </form>
+                <div id="course" class="row pl-5 pt-4">
+                    <button type="submit" form="trainer-form" id="trainer-button" class="btn bg-light col-4">Insert Trainer</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignment Insert Form -->
+
+        <div class="row mt-5"></div>
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Create an Assignment!</h3>
+        </div>
+        <div id="assignment-form-box" class="bg-secondary rounded">
+            <form id="assignment-form">
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" id="assignment-title" placeholder="Enter an assignment title" required maxlength="45"/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" id="description"
+                            placeholder="Enter an assignment description" required maxlength="45"/>
+                    </div>
+                    <div class="col-6">
+                        <label for="sub-date">Sumbission Date</label>
+                        <input type="date" class="form-control" id="sub-date" placeholder="Enter a submission date" required/>
+                    </div>
+                </div>
+                <div class="row p-3 ">
+                    <div class="col-6">
+                        <label for="total-mark">Total Mark</label>
+                        <input type="number" class="form-control" id="total-mark"
+                            placeholder="Enter the assignment's total mark" min="0" max="100" required/>
+                    </div>
+                </div>
+            </form>
+            <div class="row pl-5 py-4">
+                <button type="submit" form="assignment-form" id="assignment-button" class="btn bg-light col-2">Insert Assignment</button>
+            </div>
+        </div>
+
+
+    
+
+    
+</body>
+
+<script src = "add_elements.js">
+</script>
+
+
+</html>

@@ -1,0 +1,67 @@
+#course-button {
+    border-radius: 2px;
+    border-color: black;
+}
+
+#course-form-box {
+    box-shadow: 10px 10px lightgrey;
+    margin-top: 0px;
+}
+
+#student-form-box {
+    box-shadow: 10px 10px lightgrey;
+    margin-top: 0px;
+}
+
+#trainer-form-box {
+    box-shadow: 10px 10px lightgrey;
+    margin-top: 0px;
+}
+
+#trainer-button {
+    margin-top: 78px;
+    border-radius: 2px;
+    border-color: black;
+}
+
+#student-button {
+    
+    border-radius: 2px;
+    border-color: black;
+}
+
+#assignment-button {
+    
+    border-radius: 2px;
+    border-color: black;
+}
+
+#assignment-form-box {
+    box-shadow: 10px 10px lightgrey;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+#assignments {
+    display: block; 
+}
+
+#course-assignment-button {
+    border-radius: 2px;
+    border-color: black;
+}
+
+#course-student-button {
+    border-radius: 2px;
+    border-color: black;
+}
+
+#course-trainer-button {
+    border-radius: 2px;
+    border-color: black;
+}
+
+#course-multiple-button {
+    border-radius: 2px;
+    border-color: black;
+}

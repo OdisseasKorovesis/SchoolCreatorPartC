@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">   
+</head>
+
+<body>
+    <div class="container">
+       
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then insert any available student:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-student-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses1">Choose a course:</label>
+
+                        <select id="courses1" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div class="col-4 align-self-center">
+                        <label for="students">Choose students to be included</label>
+
+                        <select id="students" multiple required>
+                            <option value="odi-kd">Odisseas Korovesis</option>
+                            <option value="anastasia-kou">Anastasia Kounoupi</option>
+                            <option value="tina-da">Tina Danon</option>
+                            <option value="dimitris-ko">Dimitris Korovesis</option>
+                            <option value="konna-sin">Konstantina Sinevrioti</option>
+                            <option value="konn-oik">Konstantinos Oikonomidis</option>
+                            <option value="alk-bag">Alkistis Bageri</option>
+                            <option value="lucia-bi">Lucia Binioli</option>
+                        </select> 
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-student-form" id="course-student-button" class="btn bg-light col-4">Insert selected students in course</button>
+            </div>
+        </div>
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then insert any available trainer:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-trainer-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses2">Choose a course:</label>
+
+                        <select id="courses2" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div class="col-4 align-self-center">
+                        <label for="trainers">Choose trainers to be included</label>
+
+                        <select id="trainers" multiple required>
+                            <option value="giorgos-p">Giorgos Papadakis</option>
+                            <option value="iasonas-m">Iasonas Michalopoulos</option>
+                            <option value="maria-p">Maria Panagiotidou</option>
+                            <option value="ismini-a">Ismini Aleksiadou</option>
+                        </select> 
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-trainer-form" id="course-trainer-button" class="btn bg-light col-4">Insert trainers assignments in course</button>
+            </div>
+        </div>
+        
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then insert any available assignment:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded mb-5">
+            <form id="course-assignment-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses3">Choose a course:</label>
+
+                        <select id="courses3" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div class="col-4 align-self-center">
+                        <label for="assignments">Choose assignments to be included</label>
+
+                        <select id="assignments" multiple required>
+                            <option value="classes">Play With Classes</option>
+                            <option value="methods">Play With Methods</option>
+                            <option value="inheritance">Play With Inheritance</option>
+                            <option value="primitives">Play With Primitives</option>
+                            <option value="interfaces">Play With Interfaces</option>
+                            <option value="exceptions">Play With Exceptions</option>
+                            <option value="appearance">Play With Appearance</option>
+                            <option value="widgets">Play With Widgets</option>
+                        </select> 
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-assignment-form" id="course-assignment-button" class="btn bg-light col-4">Insert selected assignments in course</button>
+            </div>
+        </div>
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course, then choose a student enrolled in it, finally give him assignments:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded mb-5">
+            <form id="course-per-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-3 align-self-center">
+                        <label for="courses-per">Choose a course:</label>
+
+                        <select id="courses-per" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div class="col-3 align-self-center">
+                        <label for="students-per">Choose a student</label>
+
+                        <select id="students-per" multiple required>
+                            <option value="student-place-hldr" disabled>Choose a course first</option>
+                            
+                        </select> 
+                    </div>
+
+                    <div class="col-3 align-self-center">
+                        <label for="assignments-per">Choose assignments to be included</label>
+
+                        <select id="assignments-per" multiple required>
+                            <option value="course-place-hldr" disabled>Choose a course first</option>
+                            
+                        </select> 
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-per-form" id="course-multiple-button" class="btn bg-light col-4">Insert selected assignments into student of course</button>
+            </div>
+        </div>      
+       
+
+    
+
+    
+</body>
+
+<script src = "add_elements_multiple.js">
+</script>
+
+</html>

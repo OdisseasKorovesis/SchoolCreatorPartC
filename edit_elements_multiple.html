@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder</title>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">   
+</head>
+
+<body>
+    <div class="container">
+        
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then edit students:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses1">Choose a course:</label>
+
+                        <select id="courses1" required>                            
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div id="student-checkbox" class="col-4 align-self-center">
+                        <input type="checkbox" id="hldr" name="hdlr" value="holder"  disabled>
+                        <label for="hldr">Select a course to display students</label>                       
+                        
+                       
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-form" id="course-student-button" class="btn bg-light col-4">Edit course's students</button>
+            </div>
+        </div>
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then edit trainers:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded">
+            <form id="course-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses2">Choose a course:</label>
+
+                        <select id="courses2" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div id="trainer-checkbox" class="col-4 align-self-center">
+                        <input type="checkbox" id="hldr" name="hdlr" value="holder"  disabled>
+                        <label for="hldr">Select a course to display trainers</label>   
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-form" id="course-trainer-button" class="btn bg-light col-4">Edit course's trainers</button>
+            </div>
+        </div>
+        
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course and then edit assignments:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded mb-5">
+            <form id="course-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-4 align-self-center">
+                        <label for="courses3">Choose a course:</label>
+
+                        <select id="courses3" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div id="assignment-checkbox" class="col-4 align-self-center">
+                        <input type="checkbox" id="hldr" name="hdlr" value="holder"  disabled>
+                        <label for="hldr">Select a course to display assignments</label>
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-form" id="course-assignment-button" class="btn bg-light col-4">Edit course's assignments</button>
+            </div>
+        </div>
+
+        <div class="bg-light rounded">
+            <h3 class="col-12 p-3">Choose a course, then choose a student enrolled in it, then edit his/hers assignments:</h3>
+        </div>
+        <div id="course-form-box" class="bg-secondary rounded mb-5">
+            <form id="course-form">
+                <div class="row justify-content-around p-3">
+                    <div class="col-3 align-self-center">
+                        <label for="course-per">Choose a course:</label>
+
+                        <select id="courses-per" required>
+                            <option value="java">Java</option>
+                            <option value="c#">C#</option>
+                            <option value="html">HTML</option>
+                            <option value="javascript">JavaScript</option>
+                        </select> 
+                    </div>
+                    <div class="col-3 align-self-center">
+                        <label for="students-per">Choose a student</label>
+
+                        <select id="students-per" required>
+                            <option value="student-place-hldr" disabled selected>Choose a course first</option>
+                            
+                        </select> 
+                    </div>
+
+                    <div id = "assignments-per-checkbox" class="col-3 align-self-center">
+                        
+
+                        <input type="checkbox" id="hldr" name="hdlr" value="holder"  disabled>
+                        <label for="hldr">Choose course and student first</label>
+                            
+                        </select> 
+                    </div>
+                </div>
+                
+                
+            </form>
+            <div class="row pl-5 py-4 ">
+                <button type="submit" form="course-form" id="course-multiple-button" class="btn bg-light col-4">Update student's assignments</button>
+            </div>
+        </div>       
+      
+       
+
+    </div>
+    </div>
+
+    
+
+    
+</body>
+
+<script src = "edit_elements_multiple.js">
+</script>
+
+</html>
